@@ -26,14 +26,28 @@ Le script *subjects_analysis* permet de :
 
 Pour l'instant, rien n'est concluant : l'outil fonctionne, mais je ne suis pas sûr de savoir quelles questions méritent d'être posées.
 
-Le script permet déjà de connaître, pour un corpus donné :
+*Le script permet déjà de connaître, pour un corpus donné :*
 - le nombre de zones d'indexation par notice (distribution), donnant à voir plutôt la "quantité" d'indexation
 - le nombre de concepts par notice (distribution), évaluant également la quantité
 - le nombre de concepts par zone (distribution), permettant plutôt d'évaluer la "complexité" de l'indexation
 
-Il fournit aussi la liste des pairs de concepts (2 concepts sont liés à partir du moment où ils apparaissent dans la même notice). A voir si ce graphe est le bon...
+Il fournit aussi la liste des pairs de concepts (2 concepts sont liés à partir du moment où ils apparaissent dans la même notice). Mais il n'est pas certain que ce graphe soit le bon... : peut-être qu'utiliser les notices comme rebonds entre concepts serait plus pertinent ?
 
 On pourrait aussi envisager :
-- Densité de graphe ?
+- de calculer la densité de graphe ? (à condition de définir ce que c'est)
 - Nombre moyen/médian de liens pour un concept. 
 - Distribution (nombre de concepts liés par concept)
+
+Tout cela n'a de sens que si on dispose de 2 corpus à comparer : en soi, aucun de ces indicateurs n'aurait de signification propre.
+
+Je vais donc mettre en ligne 4 jeux de données pour commencer, tels que produits par ce script :
+- une extraction des notices du Dépôt légal de la BnF
+- une extraction de l'indexation des notices de 100.000 ebooks de la BnF (cf. [ce billet de blog expliquant comment elle a été obtenue](https://bibliotheques.wordpress.com/2018/07/09/des-milliers-de-ebooks-et-de-liens-dans-le-catalogue-de-la-bnf/))
+- une extraction de l'indexation de notices récentes à la DNB (donc, logiquement, indexées automatiquement)
+- une extraction de notices plus anciennes
+
+Je suis preneur de toute suggestion d'ajout ou d'amélioration d'indicateurs.
+
+## Pour plus tard
+
+Aujourd'hui, à ma connaissance, aucune bibliothèque francophone n'utilise de mécanisme d'indexation automatique. Mais ça me semblerait intéressant, si jamais on progresse dans cette voie pour la langue française, de concevoir par avance une méthodologie d'analyse pour évaluer les résultats d'un tel processus...
