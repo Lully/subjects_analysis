@@ -41,10 +41,10 @@ On pourrait aussi envisager :
 Tout cela n'a de sens que si on dispose de 2 corpus à comparer : en soi, aucun de ces indicateurs n'aurait de signification propre.
 
 Je vais donc mettre en ligne 4 jeux de données pour commencer, tels que produits par ce script :
-- une extraction des notices du Dépôt légal de la BnF
-- une extraction de l'indexation des notices de 100.000 ebooks de la BnF (cf. [ce billet de blog expliquant comment elle a été obtenue](https://bibliotheques.wordpress.com/2018/07/09/des-milliers-de-ebooks-et-de-liens-dans-le-catalogue-de-la-bnf/))
-- une extraction de l'indexation de notices récentes à la DNB (donc, logiquement, indexées automatiquement)
-- une extraction de notices plus anciennes
+- une extraction des notices du Dépôt légal de la BnF (requête SRU utilisée, avec limite à 100.000 résultats :  http://catalogue.bnf.fr/api/SRU?version=1.2&operation=searchRetrieve&query=bib.doctype%20all%20%22a%22%20and%20bib.recordtype%20all%20%22mon%22%20and%20bib.publisher%20all%20%22DL%22%20and%20bib.publicationdate%20any%20%222016%202017%202018%22%20and%20bib.language%20all%20%22fre%22&recordSchema=unimarcxchange&maximumRecords=20&startRecord=1 -- zones 600, 606, 607)
+- une extraction de l'indexation des notices de [100.000 ebooks de la BnF](https://bibliotheques.wordpress.com/2018/07/09/des-milliers-de-ebooks-et-de-liens-dans-le-catalogue-de-la-bnf/) (requête SRU : http://catalogue.bnf.fr/api/SRU?version=1.2&operation=searchRetrieve&query=bib.anywhere%20all%20%22acqnum%22&recordSchema=unimarcxchange&maximumRecords=20&startRecord=1 -- mêmes zones : 600, 606, 607)
+- une extraction de l'indexation de notices récentes à la DNB (donc, logiquement, indexées automatiquement) (à faire)
+- une extraction de notices plus anciennes de la DNB (donc indexées manuellement) (à faire)
 
 Je suis preneur de toute suggestion d'ajout ou d'amélioration d'indicateurs.
 
